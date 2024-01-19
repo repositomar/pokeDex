@@ -11,7 +11,7 @@ import { useDispatch } from 'react-redux';
 import { getMyPokemons } from '../store/slices/pokemon';
 
 export default function UpdatePokemon(props: any) {
-  
+  console.log(props)  
   const dispatch: any = useDispatch();
 
   const [open, setOpen] = React.useState(false);
@@ -59,7 +59,7 @@ export default function UpdatePokemon(props: any) {
             required
             margin="dense"
             id="name"
-            label={props.name}
+            label={props.alias ? props.alias : props.name}
             type="text"
             fullWidth
             variant="standard"

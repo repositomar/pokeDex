@@ -76,7 +76,7 @@ In all of them the list of Pokémon from the pokeApi consumed through the backen
 > You can select the rows to show, the page and an input where you can search for the pokemon by name.
 
 > You can add pokemon to the list of `MIS POKEMON` by clicking on the button.
-In `MIS POKEMON` you can edit, delete and export the pokemon information to a PDF file**
+In `MIS POKEMON` you can edit, delete and export the pokemon information to a PDF file
 
 
 ## BackEnd endPoints

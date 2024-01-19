@@ -107,7 +107,7 @@ export default function GetMyPokemons(props: Record<string, any>) {
               <TableCell component="th" scope="row">{pokemon.name}</TableCell>
               <TableCell>{pokemon.alias}</TableCell>
               <TableCell>
-                <UpdatePokemon name={pokemon.name} id={pokemon._id}/>
+                <UpdatePokemon name={pokemon.name} id={pokemon._id} alias={pokemon.alias}/>
               </TableCell>
               <TableCell>
                 <ExportPokemon name={pokemon.name} id={pokemon._id}/>
