@@ -1,0 +1,9 @@
+http:
+  port: ${PORT:-3000}
+
+db:
+  mongodb:
+    url: '${MONGODB_URI}'
+
+pokeApi:
+  url: ${POKE_API}

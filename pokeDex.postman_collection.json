@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "d693bba6-9c31-4d4c-9857-94dc75750c8f",
+		"name": "pokeDex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Pokemon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"bulbasaur\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Pokemon",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bulbasaur\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/pokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"pokemon"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "200"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Jan 2024 19:34:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"bulbasaur\",\n    \"base_experience\": 64,\n    \"height\": 7,\n    \"weight\": 69,\n    \"is_Active\": true,\n    \"_id\": \"65a97d468b9252a5bd50f825\",\n    \"createdAt\": \"2024-01-18T19:34:30.671Z\",\n    \"updatedAt\": \"2024-01-18T19:34:30.671Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all Pokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all Pokemons",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/pokemon",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"pokemon"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "644"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Jan 2024 23:50:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=72"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"65a99bf6866772e464d63630\",\n        \"name\": \"bulbasaur\",\n        \"base_experience\": 64,\n        \"height\": 7,\n        \"weight\": 69,\n        \"is_Active\": true,\n        \"createdAt\": \"2024-01-18T21:45:26.383Z\",\n        \"updatedAt\": \"2024-01-18T22:06:17.564Z\",\n        \"__v\": 0,\n        \"alias\": \"Papitas\"\n    },\n    {\n        \"_id\": \"65a99f11d8d0fb166786a5ea\",\n        \"name\": \"bulbasaur\",\n        \"base_experience\": 64,\n        \"height\": 7,\n        \"weight\": 69,\n        \"is_Active\": true,\n        \"createdAt\": \"2024-01-18T21:58:41.971Z\",\n        \"updatedAt\": \"2024-01-18T21:59:23.125Z\",\n        \"__v\": 0,\n        \"alias\": \"ergvwetgver\"\n    },\n    {\n        \"_id\": \"65a99f49d8d0fb166786a5f5\",\n        \"name\": \"bulbasaur\",\n        \"base_experience\": 64,\n        \"height\": 7,\n        \"weight\": 69,\n        \"is_Active\": true,\n        \"createdAt\": \"2024-01-18T21:59:37.746Z\",\n        \"updatedAt\": \"2024-01-18T21:59:37.746Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get Pokemon by pokemonId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/:pokemonId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						":pokemonId"
+					],
+					"variable": [
+						{
+							"key": "pokemonId",
+							"value": "65a6fc51bcd9b3471502eb70"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Pokemon by pokemonId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/:pokemonId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								":pokemonId"
+							],
+							"variable": [
+								{
+									"key": "pokemonId",
+									"value": "65a6fc51bcd9b3471502eb70"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "214"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Jan 2024 19:22:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"65a6fc51bcd9b3471502eb70\",\n    \"name\": \"pikachu\",\n    \"alias\": \"pepe\",\n    \"base_experience\": 112,\n    \"height\": 4,\n    \"weight\": 60,\n    \"is_Active\": true,\n    \"createdAt\": \"2024-01-16T21:59:45.200Z\",\n    \"updatedAt\": \"2024-01-16T21:59:45.200Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Pokemon by pokemonId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"alias\": \"Ramon\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3200/:pokemonId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						":pokemonId"
+					],
+					"variable": [
+						{
+							"key": "pokemonId",
+							"value": "65a9c460ecb7217afce9951c"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Pokemon by pokemonId",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alias\": \"Ramon\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3200/:pokemonId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								":pokemonId"
+							],
+							"variable": [
+								{
+									"key": "pokemonId",
+									"value": "65a9c460ecb7217afce9951c"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "216"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jan 2024 00:56:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"65a9c460ecb7217afce9951c\",\n    \"name\": \"bulbasaur\",\n    \"base_experience\": 64,\n    \"height\": 7,\n    \"weight\": 69,\n    \"is_Active\": true,\n    \"createdAt\": \"2024-01-19T00:37:52.953Z\",\n    \"updatedAt\": \"2024-01-19T00:56:53.076Z\",\n    \"__v\": 0,\n    \"alias\": \"Ramon\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Pokemon by pokemonId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/:pokemonId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						":pokemonId"
+					],
+					"variable": [
+						{
+							"key": "pokemonId",
+							"value": "65a9c460ecb7217afce9951c"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Pokemon by pokemonId",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/:pokemonId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								":pokemonId"
+							],
+							"variable": [
+								{
+									"key": "pokemonId",
+									"value": "65a9c460ecb7217afce9951c"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "217"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jan 2024 00:59:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"65a9c460ecb7217afce9951c\",\n    \"name\": \"bulbasaur\",\n    \"base_experience\": 64,\n    \"height\": 7,\n    \"weight\": 69,\n    \"is_Active\": false,\n    \"createdAt\": \"2024-01-19T00:37:52.953Z\",\n    \"updatedAt\": \"2024-01-19T00:59:15.937Z\",\n    \"__v\": 0,\n    \"alias\": \"Ramon\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all pokemons by pokeApi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/poke-api/pokemon?page=0&limit=1302&s=meo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						"poke-api",
+						"pokemon"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "1302"
+						},
+						{
+							"key": "s",
+							"value": "meo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get all pokemons by pokeApi",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3200/poke-api/pokemon?page=0&limit=1302&s=meo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3200",
+							"path": [
+								"poke-api",
+								"pokemon"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "1302"
+								},
+								{
+									"key": "s",
+									"value": "meo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "content-length",
+							"value": "554"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 18 Jan 2024 05:38:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=72"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 1302,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"name\": \"meowscarada\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/908/\"\n        },\n        {\n            \"name\": \"meowstic-female\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/10025/\"\n        },\n        {\n            \"name\": \"meowstic-male\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/678/\"\n        },\n        {\n            \"name\": \"meowth\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/52/\"\n        },\n        {\n            \"name\": \"meowth-alola\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/10107/\"\n        },\n        {\n            \"name\": \"meowth-galar\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/10161/\"\n        },\n        {\n            \"name\": \"meowth-gmax\",\n            \"url\": \"https://pokeapi.co/api/v2/pokemon/10200/\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Export Pokemon info to PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3200/:pokemonId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3200",
+					"path": [
+						":pokemonId"
+					],
+					"variable": [
+						{
+							"key": "pokemonId",
+							"value": "65a9c460ecb7217afce9951c"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
