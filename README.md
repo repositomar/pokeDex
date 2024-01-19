@@ -33,24 +33,37 @@ This will install the project dependencies.
 ```bash
 $ npm install
 ```
-
 ## Running the BackEnd app
-In terminal go to directory `backend/pokedex`
 This command will start the server, the application will run on `port 3200`
 
 ```bash
 # development
-$ cd backend/pokedex
 $ npm run start
 ```
 
+## First steps Frontend
+> **Go to directory `frontend/pokedex` and run the following commands to setup node environment.**
+
+This will install the node version required for this project.
+```bash
+$ nvm install 
+```
+
+This will set as current node version the required version for this project.
+```bash
+$ nvm use 
+```
+
+This will install the project dependencies.
+```bash
+$ npm install
+```
+
 ## Running the FrontEnd app
-In another terminal go to directory `frontend/pokedex`
 This command will start the server, the application will run on `port 3000`
 
 ```bash
 # development
-$ cd frontend/pokedex
 $ npm run start
 ```
 

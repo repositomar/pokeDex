@@ -59,7 +59,7 @@ export default function UpdatePokemon(props: any) {
             required
             margin="dense"
             id="name"
-            label="Alias"
+            label={props.name}
             type="text"
             fullWidth
             variant="standard"

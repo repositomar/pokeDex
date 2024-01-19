@@ -5,7 +5,4 @@ export class CreatePokemonDTO {
   @ApiProperty({ type: String })
   @IsString()
   name: string;
-  @ApiProperty({ type: String })
-  @IsString()
-  alias: string;
 }

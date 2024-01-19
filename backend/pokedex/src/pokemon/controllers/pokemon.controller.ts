@@ -31,6 +31,7 @@ export class PokemonController {
     status: 201,
     description: 'Create PDF',
   })
+  @ApiParam({ name: 'pokemonId', description: 'PokemonId', required: true })
   exportPokemon(
     @Param('pokemonId') pokemonId: string,
     @Res({ passthrough: true }) res,
@@ -49,11 +50,20 @@ export class PokemonController {
   }
 
   @Get('pokemon')
+  @ApiResponse({
+    status: 200,
+    description: 'Get all pokemon',
+  })
   getAllPokemon() {
     return this.pokemonService.getAllPokemon();
   }
 
   @Put(':pokemonId')
+  @ApiResponse({
+    status: 200,
+    description: 'Update pokemon',
+  })
+  @ApiParam({ name: 'pokemonId', description: 'PokemonId', required: true })
   updatePokemon(
     @Param('pokemonId') pokemonId: string,
     @Body() body: UpdatePokemonDTO,
@@ -62,6 +72,11 @@ export class PokemonController {
   }
 
   @Delete(':pokemonId')
+  @ApiResponse({
+    status: 200,
+    description: 'Delete pokemon',
+  })
+  @ApiParam({ name: 'pokemonId', description: 'PokemonId', required: true })
   deletePokemon(@Param('pokemonId') pokemonId: string) {
     return this.pokemonService.deletePokemon(pokemonId);
   }

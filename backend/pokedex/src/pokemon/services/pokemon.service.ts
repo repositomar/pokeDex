@@ -24,13 +24,12 @@ export class PokemonService {
   ) {}
 
   async createPokemon(createPokemonData: CreatePokemonDTO): Promise<IPokemon> {
-    const { name, alias } = createPokemonData;
+    const { name } = createPokemonData;
     const { base_experience, height, weight } =
       await this.pokeApiService.getPokemon(name);
 
     const payload = {
       name,
-      alias,
       base_experience,
       height,
       weight,
@@ -84,7 +83,7 @@ export class PokemonService {
     return deletedPokemon;
   }
 
-  async exportPokemon(pokemonId: string, res: any) {
+  async exportPokemon(pokemonId: string, res: any): Promise<string> {
     const existingPokemon = await this.pokemonDocument.findById({
       _id: pokemonId,
     });
